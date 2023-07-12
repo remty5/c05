@@ -6,7 +6,7 @@
 /*   By: rvandepu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 15:53:33 by rvandepu          #+#    #+#             */
-/*   Updated: 2023/07/11 17:58:57 by rvandepu         ###   ########.fr       */
+/*   Updated: 2023/07/12 19:16:49 by rvandepu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_recursive_power(int nb, int power)
 		return (nb * ft_recursive_power(nb, --power));
 }
 
-int	main(int argc, char *argv[])
+/*int	main(int argc, char *argv[])
 {
 	int	pow;
 
@@ -34,4 +34,4 @@ int	main(int argc, char *argv[])
 	}
 	else
 		printf("Usage: %s <number> <power>\n", argv[0]);
-}
+}*/
