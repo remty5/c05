@@ -6,38 +6,35 @@
 /*   By: rvandepu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 18:19:19 by rvandepu          #+#    #+#             */
-/*   Updated: 2023/07/17 13:03:53 by rvandepu         ###   ########.fr       */
+/*   Updated: 2023/07/17 14:30:52 by rvandepu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 
-int	ft_find_next_prime(int nb)
+int	ft_is_prime(int nb)
 {
 	int	n;
 
-	while (1)
-	{
-		if (nb <= 2)
-			return (2);
-		else if (nb % 2 == 0)
-		{
-			nb++;
-			continue ;
-		}
-		n = 3;
-		while (n <= nb / n)
-		{
-			if (nb % n == 0)
-			{
-				nb += 2;
-				continue ;
-			}
-			n += 2;
-		}
-		return (nb);
-	}
+	if (nb < 2)
+		return (0);
+	n = 2;
+	while (n < nb / n)
+		if (nb % n++ == 0)
+			return (0);
+	return (1);
+}
+
+int	ft_find_next_prime(int nb)
+{
+	if (nb <= 2)
+		return (2);
+	if (nb % 2 == 0)
+		nb++;
+	while (ft_is_prime(nb) == 0)
+		nb += 2;
+	return (nb);
 }
 
 /*int	main(int argc, char *argv[])
