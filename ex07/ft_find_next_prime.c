@@ -6,7 +6,7 @@
 /*   By: rvandepu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 18:19:19 by rvandepu          #+#    #+#             */
-/*   Updated: 2023/07/17 14:30:52 by rvandepu         ###   ########.fr       */
+/*   Updated: 2023/07/26 20:15:06 by rvandepu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_is_prime(int nb)
 	if (nb < 2)
 		return (0);
 	n = 2;
-	while (n < nb / n)
+	while (n <= nb / n)
 		if (nb % n++ == 0)
 			return (0);
 	return (1);
